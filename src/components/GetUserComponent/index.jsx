@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./style.css";
 
 function GetUserComponent({ setUser, setIsLoggedIn }) {
   const [userInput, setUserInput] = useState("");
@@ -9,15 +10,20 @@ function GetUserComponent({ setUser, setIsLoggedIn }) {
   }
 
   return (
-    <form>
-      <h2>Bem-vinde à página de Login!</h2>
-      <input
-        type="text"
-        value={userInput}
-        onChange={(event) => setUserInput(event.target.value)}
-      />
-      <button onClick={() => HandleLogin(userInput)}>Acessar com o nome</button>
-    </form>
+    <div>
+      <form>
+        <h2>Bem-vinde à página de Login!</h2>
+        <p>Insira seu nome abaixo para acessar</p>
+
+        <input
+          type="text"
+          value={userInput}
+          onChange={(event) => setUserInput(event.target.value)}
+          placeholder="Digite seu nome aqui"
+        />
+        <button onClick={() => HandleLogin(userInput)}>Acessar página</button>
+      </form>
+    </div>
   );
 }
 

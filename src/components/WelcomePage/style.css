@@ -1,0 +1,12 @@
+.Logged {
+  border-radius: 10px;
+  max-width: 95vw;
+  background-color: #f0b323;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 150px;
+  color: #2c25ef;
+}
