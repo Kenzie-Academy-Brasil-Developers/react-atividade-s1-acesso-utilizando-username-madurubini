@@ -5,8 +5,11 @@ function GetUserComponent({ setUser, setIsLoggedIn }) {
   const [userInput, setUserInput] = useState("");
 
   function HandleLogin(userInput) {
-    setUser(userInput);
-    setIsLoggedIn(true);
+    let tamanho = userInput.length;
+    if (tamanho > 1) {
+      setUser(userInput);
+      setIsLoggedIn(true);
+    }
   }
 
   return (
